@@ -1,0 +1,7 @@
+import drop_superspreader
+
+define intent dropSS:
+  to     any
+  for    traffic('any')
+  apply  drop_superspreader
+  with   threshold('more',2)

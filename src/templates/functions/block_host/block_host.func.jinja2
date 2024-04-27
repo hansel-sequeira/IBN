@@ -1,0 +1,14 @@
+    action mark_corresponding_host() {
+	bit<32> temp;
+        if(HOST_IDENTIFIER == 1){
+		if(standard_metadata.ingress_port == 1){
+			meta.blockedHost = 1;
+		}
+	} else if(HOST_IDENTIFIER == 2){
+		if(standard_metadata.ingress_port == 2){
+			meta.blockedHost = 1;
+		}
+	}
+    }
+
+	
